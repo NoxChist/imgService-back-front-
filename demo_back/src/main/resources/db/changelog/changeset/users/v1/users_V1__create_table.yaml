@@ -1,0 +1,36 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user-table
+      author: Nox
+      changes:
+        - createTable:
+            schemaName: users
+            tableName: user
+            columns:
+              - column:
+                  name: email
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+                    unique: true
+              - column:
+                  name: firstname
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: lastname
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: role
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

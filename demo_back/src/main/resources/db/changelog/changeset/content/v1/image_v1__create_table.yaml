@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-image-table
+      author: Nox
+      changes:
+        - createTable:
+            schemaName: content
+            tableName: image
+            columns:
+              - column:
+                  name: author
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: img_name
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: publication_date
+                  type: date
+                  constraints:
+                    nullable: false

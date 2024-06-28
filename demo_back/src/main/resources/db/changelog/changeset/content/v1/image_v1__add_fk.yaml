@@ -1,0 +1,15 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-foreign-key-to-image-table
+      author: Nox
+      changes:
+        - addForeignKeyConstraint:
+            baseColumnNames: author
+            baseTableName: image
+            baseTableSchemaName: content
+            referencedColumnNames: email
+            referencedTableName: user
+            referencedTableSchemaName: users
+            constraintName: fk_image_author
+            onDelete: CASCADE
+            onUpdate: RESTRICT
