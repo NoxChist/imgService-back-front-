@@ -19,6 +19,7 @@ export default {
         localStorage.removeItem('token')
         let authorised = false;
         this.emitter.emit("authorised", authorised)
+        this.$router.push('/')
       }
     },
     addNew() {
